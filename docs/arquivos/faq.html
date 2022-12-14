@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>ocomonphp &raquo; faq</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<strong>Perguntas Frequentes</strong><br />
+<br />
+Nessa área foram reunidas as principais perguntas (e respostas) de usuários novatos no sistema.<br />
+<br />
+<strong>Perguntas:<br />
+<br />
+01</strong> - <a class="wiki_link" href="faq.html#arc-01">Não consigo me logar no sistema com o usuário &quot;admin&quot; e senha &quot;admin&quot;.</a><br />
+<br />
+<strong>02</strong> - <a class="wiki_link" href="faq.html#arc-02">Após logar no sistema o mesmo entra em loop e fica dando refresh constantemente</a>.<br />
+<br />
+<strong>03</strong> - <a class="wiki_link" href="faq.html#arc-03">O sistema não está exibindo corretamente as palavras com acentuação</a>.<br />
+<br />
+<strong>04</strong> - <a class="wiki_link" href="faq.html#arc-04">Primeiro acesso, o sistema exibe um monte de texto puro na tela e não mostra o layout correto</a>.<br />
+<br />
+<br />
+<br />
+<strong>Respostas</strong>:<br />
+<a name="arc-01"></a><br />
+<strong>01</strong> - Até a versão 1.40 o OcoMon precisa que a diretiva <strong>register_globals</strong> esteja marcada como <strong>On</strong>. Essa configuração deve ser feita no arquivo de configuração do PHP (php.ini). Dependendo do sistema é comum existirem mais de um arquivo php.ini, portanto, antes de editar o arquivo tenha certeza de qual php.ini está sendo utilizado pelo PHP.<br />
+<br />
+<a name="arc-02"></a><br />
+<strong>02</strong> - Essa situação ocorre caso você esteja acessando o sistema com usuário de nível <a class="wiki_link" href="usuarios.html">somente-abertura</a> mas associado a uma área que esteja marcada como &quot;<a class="wiki_link" href="areas.html">Atende chamados</a>&quot;.<br />
+<br />
+<a name="arc-03"></a><br />
+<strong>03</strong> - Edite o arquivo de configuração do apache (httpd.conf ou apache2.conf). defina como default a codificação iso-8859-1 no charset. para isso, verifica a entrada &quot;adddefaultcharset&quot;, se estiver utf-8, você comenta e adiciona a linha: adddefaultcharset iso-8859-1. Caso não exista a entrada &quot;adddefaultcharset&quot; apenas adicione a linha adddefaultcharset iso-8859-1 no arquivo.<br />
+Após isso é necessário reiniciar o apache.<br />
+<br />
+<a name="arc-04"></a><br />
+<strong>04</strong> - Até a versão 2.0rc3 é necessário habilitar a diretiva <strong>short_open_tag</strong> no arquivo de configuração do PHP (php.ini) para que esse problema não ocorra.
+    </div>
+  </body>
+</html>

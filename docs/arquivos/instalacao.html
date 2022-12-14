@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <title>ocomonphp &raquo; instalacao</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<strong>INSTALAÇÃO</strong> (leia até o fim)<br />
+<br />
+Primeira instalação (<strong>versão 2.0RC5</strong>):<br />
+<br />
+Descompactar o arquivo do OcoMon para o seu web server (/usr/local/apache2/htdocs/ usualmente no FreeBSD ou var/www/html, em sistemas Linux com Apache).<br />
+As permissões dos arquivos podem ser as default do seu servidor, apenas o diretório /includes/logs deve ter permissão de escrita<br />
+para todos os usuários, pois é o diretório onde são gravados alguns arquivos de log do sistema.<br />
+<br />
+Criar um novo banco de dados no MySQL e nomeá-lo: 'ocomon' (ou qualquer ou nome sugestivo). É recomendável a criação de um usuário<br />
+específico, no banco de dados, para manipulação da base do Ocomon.<br />
+<br />
+Ex:<br />
+GRANT USAGE ON * . * TO 'ocomon_user'@'localhost' IDENTIFIED BY 'senha' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 ;<br />
+GRANT SELECT , INSERT , UPDATE , DELETE ON `base_ocomon` . * TO 'ocomon_user'@'localhost';<br />
+<br />
+Dentro do diretório do MYSQL no seu servidor digite:<br />
+mysql -u USERNAME -p create database ocomon<br />
+<br />
+Para a criação das tabelas, você precisa apenas rodar um único arquivo SQL para popular a base do sistema:<br />
+o arquivo é: DB_OCOMON_2.0RC5_FULL.SQL (em ocomon/install/2.0RC5/)<br />
+<br />
+Você pode executar o script acima através do próprio mysql (seguindo o mesmo procedimento citado abaixo) ou através de algum<br />
+gerenciador gráfico como o phpMyAdmin por exemplo.<br />
+<br />
+Você também pode rodar o script citado da seguinte forma:<br />
+Dentro do diretório do MYSQL no seu servidor digite:<br />
+mysql -uUSERNAME -p DATABASENAME &lt; DB_OCOMON_2.0RC5_FULL.SQL (considerando que o script está dentro do diretório do mysql). <strong>Importante</strong>: defina o conjunto de caracteres do arquivo como UTF8 na importação.<br />
+<br />
+Onde:<br />
+USERNAME=nome do usuário &quot;root&quot; do MySQL<br />
+DATABASENAME=nome do banco de dados criado para receber os dados do Ocomon (se você escolher um nome diferente de &quot;ocomon&quot;, não esqueça de alterar no arquivo includes/config.inc.php.<br />
+Você deverá digitar a senha de root do MySQL para iniciar a execução dos scripts.<br />
+<br />
+<hr />
+<strong>Após a instalação, é recomendável a exclusão da pasta &quot;install&quot; dentro de ocomon/install;</strong><br />
+<hr />
+<br />
+<br />
+<strong>ATUALIZAÇÃO</strong>:<br />
+<br />
+Caso esteja atualizando apartir de uma versão anterior, basta sobrescrever os scripts da pasta do OcoMon pelos scripts da nova versão e importar para o MySQL o arquivo de atualização correspondente à sua versão atual. Os arquivos de atualização obedecem a seguinte nomenclatura:<br />
+UPDATE-FROM{versão-anterior}-TO-{versao-final}.SQL<br />
+<br />
+<br />
+<strong>CONFIGURAÇÃO</strong>:<br />
+<br />
+Todas as configurações necessárias deverao ser feitas no arquivo config.inc.php e no menu Admin-&gt;Configurações.<br />
+você não conseguirá utilizar o OCOMON até ter configurado o arquivo config.inc.php. Para isso é necessário criar uma cópia do arquivo<br />
+config.inc.php-dist e renomeá-lo para config.inc.php. Quanto à sua configuração, o arquivo é auto-explicativo. :)<br />
+<br />
+<br />
+<u>Iniciando o uso do OCOMON</u>:<br />
+<br />
+<br />
+Passo a passo:<br />
+<br />
+ACESSO<br />
+usuário: admin<br />
+senha: admin (Não esqueça de alterar esse senha tão logo tenha acesso ao sistema!!)<br />
+<br />
+Novos usuários podem ser criados no menu ADMIN-USUÁRIOS<br />
+<br />
+<br />
+<br />
+<hr />
+<strong>IMPORTANTE!!</strong><br />
+<hr />
+<br />
+<br />
+<u>CONFIGURAÇÃO DE ABERTURA DE CHAMADOS PELO USUÁRIO FINAL:</u><br />
+<br />
+Para a abertura de chamados funcionar adequadamente é necessário observar os seguintes pontos:<br />
+<br />
+1 - Cadastre uma nova área de atendimento, e desmarque a opção &quot;Presta atendimento&quot;. Essa área será criada<br />
+especificamente pára abertura de chamados. O e-mail dessa área não precisa ser um e-mail válido pois<br />
+não será utilizado pelo sistema.<br />
+<br />
+2 - Configure a área criada como &quot;Área de nível somente abertura&quot;.<br />
+<br />
+3 - Para cadastrar usuários como somente abertura de chamados, utilize o auto-cadastro na tela de login do sistema.<br />
+Se for cadastrar manualmente cada usuário de abertura observe que o nível deve ser definido como &quot;Somente abertura&quot;<br />
+e a área deve ser a área criada para abertura de chamados sem definições de áreas secundárias.<br />
+<br />
+<br />
+<u>AGENDAMENTO DE CHAMADOS:</u><br />
+<br />
+Para o controle de SLAs funcionar adequadamente, é necessário a criação de mais dois STATUS<br />
+(menu Admin-&gt;Ocorrências-&gt;Status) específicos, um para ser utilizado automaticamente no agendamento de chamados na<br />
+abertura dos mesmos e outro para ser utilizado automaticamente no agendamento de chamados já abertos(na edição).<br />
+<br />
+- O status a ser criado para agendamento na abertura deverá, OBRIGATORIAMENTE, ter dependência igual a &quot;SERVIÇO DE TERCEIROS&quot; ou<br />
+&quot;A ÁREA TÉCNICA&quot;.<br />
+<br />
+- O status a ser criado para agendamento na edição deverá, OBRIGATORIAMENTE, ter dependência igual a &quot;INDEPENDENTE&quot; ou<br />
+&quot;AO USUÁRIO&quot;.<br />
+<br />
+Os status criados deverão ser utilizados no menu Admin-&gt;Configurações-&gt;Agendamento de chamados.<br />
+<br />
+<br />
+<u>DEFINIÇÃO DE PRIORIDADES DE ATENDIMENTO</u><br />
+<br />
+1 - Ir ao menu Admin-&gt; Ocorrências-&gt; <a class="wiki_link" href="prioridades-atendimento.html">Prioridades de atendimento</a> e cadastrar os tipos de prioridades de seu interesse. Ex: Urgente, Alto, Normal, Baixo.. etc.<br />
+2 - Definir um dos tipos de prioridade criados como sendo padrão;<br />
+3 - Na tela de cadastro de tipos de prioridades, clicar no link para atualizar os chamados antigos para o tipo de prioridade padrão do sistema;<br />
+4 - Caso não deseje que o campo &quot;Prioridade&quot; apareça na tela de abertura de chamados do usuário-final, será necessário configurar esse comportamento no menu Admin -&gt; <a class="wiki_link" href="admin-perfis.html">Perfis de tela de abertura</a>;
+    </div>
+  </body>
+</html>

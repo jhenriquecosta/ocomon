@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>ocomonphp &raquo; adm-config-geral</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<strong>Configurações gerais</strong> (Admin -&gt; Configurações -&gt; Configurações gerais)<br />
+<br />
+<img src="files/adm-config-geral-01.png" alt="adm-config-geral-01.png" title="adm-config-geral-01.png" /><br />
+<img src="files/adm-config-geral-02.png" alt="adm-config-geral-02.png" title="adm-config-geral-02.png" /><br />
+<em>Tela de configurações gerais do sistema - versão 2.0rc3</em><br />
+<br />
+<strong>Descrição das opções de configuração:</strong><br />
+<a name="idioma"></a><br />
+<u>ARQUIVO DE IDIOMA:</u> Caixa de seleção para o idioma do sistema. Aqui será exibidos todos os arquivos de idioma disponíveis. Para criar um novo arquivo de idioma, basta fazer uma cópia do arquivo pt_BR.php (em ocomon/includes/languages) e subtituir as entradas de tradução pelo valor correspondente ao idioma pretendido.<br />
+<br />
+<u>FORMATO DE DATA:</u> Formato da exibição da data pelo sistema. Esse formato segue o padrão PHP.<br />
+<br />
+<u>SITE PARA ACESSO AO OCOMON:</u> Endereço web para acesso ao sistema OcoMon dentro de sua rede. O valor informado nesse campo será utilizado pelo sistema como referência para variáveis de ambiente e rodapé de e-mails enviados automaticamente.<br />
+<br />
+REGISTROS POR PÁGINA: Defina aqui quantos registros serão exibidos por página na área de inventário do sistema.<br />
+<br />
+<u>EDIÇÃO DE DATAS:</u> A marcação dessa opção permite que operadores com privilégios de administrador possa alterar as datas de abertura e encerramento dos chamados de forma manual. Para garantir a lisura e confiabilidade do sistema, não é recomendado que se habilite essa função.<br />
+<a name="status-agendamento"></a><br />
+<u>AGENDAMENTO DE CHAMADOS:</u> Essa opção define como serão tratados os chamados agendados no sistema quanto ao controle do tempo de resposta e solução através do tipo de status que forem atribuídos para cada tipo de agendamento. O Ocomon permite que um chamado seja agendado no ato de sua criação no sistema ou após ele já estar aberto no mesmo. Para cada um desses casos é necessário atribuir um diferente status de controle.<br />
+<br />
+Para o controle de SLAs funcionar adequadamente, é necessário a criação de mais dois STATUS (menu Admin-&gt;Ocorrências-&gt;Status) específicos, um para ser utilizado automaticamente no agendamento de chamados na abertura dos mesmos e outro para ser utilizado automaticamente no agendamento de chamados já abertos(na edição).<br />
+<br />
+O status a ser criado para agendamento na abertura deverá, OBRIGATORIAMENTE, ter dependência igual a &quot;SERVIÇO DE TERCEIROS&quot; ou &quot;A ÁREA TÉCNICA&quot;.<br />
+<br />
+O status a ser criado para agendamento na edição deverá, OBRIGATORIAMENTE, ter dependência igual a &quot;INDEPENDENTE&quot; ou &quot;AO USUÁRIO&quot;.<br />
+<br />
+
+<ul>
+    <li>STATUS PARA CHAMADOS AGENDADOS NA ABERTURA: Após a criação dos novos status, conforme descrição àcima, selecione aqui o status criado para agendamentos na abertura de chamados.</li>
+    <li>STATUS PARA CHAMADOS AGENDADOS NA EDIÇÃO: selecione aqui o status criado para agendamentos provenientes de edição de chamados já abertos.</li>
+</ul>
+
+<br />
+<br />
+<u>ENCAMINHAMENTO DE CHAMADOS NA ABERTURA:</u> Defina aqui qual será o status que terão os chamados encaminhados para os técnicos, diretamente da tela de abertura de chamados. O status definido aqui será assumido automaticamente pelos chamados que forem encaminhados para técnicos apartir da tela de abertura.<br />
+<br />
+<u>REABERTURA DE CHAMADOS:</u> Marcando essa opção, o sistema permitirá a re-abertura de chamados já encerrados no mesmo.<br />
+<br />
+<u>TIPOS DE ARQUIVOS PERMITIDOS:</u> Aqui é possível definir, dentre as opções possíveis, os tipos de arquivos que serão aceitos como anexos nos chamados. Além disso, é possível também, definir altura e largura máxima (para o caso de arquivos de imagens) e tamanho máximo permitido. Arquivos de imagens são aceitos por padrão no sistema.<br />
+<br />
+<u>BARRA DE FORMATAÇÃO DE TEXTOS:</u> O OcoMon permite que seja utilizada barra de formatação para a digitação dos textos no sistema. As alternativas possíveis são o <strong>Mural</strong> (área de recados) e <strong>Ocorrências</strong> (abertura de chamados, edição e encerramento). Por padrão, apenas a área do mural vem com a barra de formatação habilitada.<br />
+<img src="files/toolbar.png" alt="toolbar.png" title="toolbar.png" /><br />
+<br />
+<u>ALERTA SOBRE O VENCIMENTO DE GARANTIA:</u> O OcoMon envia e-mails de forma automática informando sobre o vencimento das garantias dos equipamentos. Nessa tela é possível definir a quantidade de dias de antecedência com que os e-mails serão enviados antes do vencimento das garantias. Aqui também será definida para qual área de atendimento os e-mails serão enviados. Até a versão 2.0rc3, o sistema só alerta sobre os vencimentos das garantias de componentes avulsos.<br />
+<br />
+<u>CATEGORIAS DE PROBLEMAS:</u> O OcoMon permite que os sejam criados até 3 níveis de <a class="wiki_link" href="abertura-chamados.html#abertura-categoria">categorias</a> para os <a class="wiki_link" href="abertura-chamados.html#abertura-problema">problemas</a> cadastrados. Esse tipo de classificação facilita o agrupamento dos chamados por até 3 critérios distintos. Exemplo: Posso definir a categoria 1 quanto ao tipo de manutenção: PREVENTIVA OU CORRETIVA. Posso definir a categoria 2 quanto ao objeto de atendimento: HARDWARE OU SOFTWARE. Etc...<br />
+<strong>Nessa tela</strong> você apenas irá denominar cada uma das categorias a serem utilizadas.<br />
+Ex: por padrão, o nome da primeira categoria é &quot;CATEGORIA 1&quot;. Nesse caso você pode alterar para &quot;TIPO DE MANUTENÇÃO&quot; (apenas sugestão). Na tela de cadastro de problemas é possível criar as sub-categorias desses 3 níveis possíveis.<br />
+<br />
+Para criar os tipos dentro de cada categoria acesse: <em>menu <u>Admin-&gt;Ocorrências-&gt;Problemas-&gt;Novo-&gt;Gerenciar</u></em><br />
+<br />
+<u>ESQUEMA DE CORES:</u> O OcoMon permite sua personalização apartir da criação de esquemas de cores definidos pelo próprio administrador. O OcoMon já traz alguns esquemas prontos para serem escolhidos. Nessa opção, o administrador pode definir se permite que os usuários do sistema possam escolher um esquema dentre os disponíveis ou se utilizarão somente o tema que o administrador definir como padrão do sistema.
+    </div>
+  </body>
+</html>

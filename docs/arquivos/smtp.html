@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>ocomonphp &raquo; smtp</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<strong>Configuração para envio de e-mails</strong> (Admin -&gt; Configurações -&gt; E-mail - SMTP)<br />
+<br />
+Nessa tela você poderá configurar as opções globais para envio de e-mail pelo sistema Ocomon, as opções são:<br />
+<br />
+
+<ul>
+    <li><u>Utiliza SMTP</u>: essa opção vem marcada por padrão, isso significa que os e-mails enviados pelo sistema utilizarão o endereço SMTP especificado por você. Caso você desabilite essa opção os e-mails serão enviados utilizando a função &quot;mail&quot; do PHP e o arquivo php.ini deve estar configurado com essa função para funcionar de maneira adequada.</li>
+    <li><u>Endereço SMTP</u>: aqui você deve especificar o endereço SMTP que deverá ser utilizado para o envio das mensagens do sistema se a opção &quot;Utiliza SMTP&quot; estiver habilitada.</li>
+    <li><u>Precisa de autenticação</u>: se o seu servidor de e-mail requerer autenticação para envio de mensagens você deve habilitar essa opção.</li>
+    <li><u>Usuário</u>: usuário válido para autenticação de envio de e-mail pelo SMTP definido por você. Também é necessário digitar a senha para a autenticação.</li>
+    <li><u>Endereço de envio(FROM)</u>: endereço que aparecerá como remetente das mensagens enviadas pelo sistema. Ex: <a class="wiki_link_ext" href="mailto:ocomon@sua-empresa.com" rel="nofollow">ocomon@sua-empresa.com</a></li>
+    <li><u>Nome do From (alias)</u>: apelido para o endereço de envio. Ex: SUPORTE OCOMON.</li>
+    <li><u>Conteúdo HTML</u>: se essa opção estiver habilitada, o sistema aceitará o envio de mensagens no formato HTML, do contrário apenas mensagens texto serão enviadas.</li>
+</ul>
+
+
+    </div>
+  </body>
+</html>

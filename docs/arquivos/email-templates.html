@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>ocomonphp &raquo; email-templates</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<strong>Cadastro e edição de templates de e-mails</strong> (Admin -&gt; Ocorrências -&gt; E-mail templates)<br />
+<br />
+O OcoMon permite a criação de modelos de mensagens para serem enviadas por e-mail através da <a class="wiki_link" href="oco-detalhes.html#archor-enviar-email">tela de detalhes das ocorrências</a>. Esses modelos são úteis para manter a padronização das mensagens enviadas aos usuários para cada tipo específico de situação.<br />
+<br />
+Os campos para cadastro são:<br />
+<br />
+<u>Sigla</u>: aqui deve ser definida uma sigla ou abreviatura para o modelo. Essa sigla é apenas um identificador para o modelo.<br />
+<br />
+<u>Assunto</u>: aqui deve ser definido o assunto do modelo. Aqui o campo &quot;assunto&quot; corresponde ao campo &quot;assunto&quot; ou subject no formulário de e-mail.<br />
+<br />
+<u>Mensagem</u>: aqui deve ser colocada a mensagem propriamente dita, ou seja, é o texto de e-mail a ser enviado.<br />
+<br />
+<strong>Novo:</strong> A partir da versão 2.0RC5, é possível utilizar variáveis de ambiente dentro dos templates criados, dessa forma diversas informações sobre os chamados serão preenchidas automaticamente pelo sistema.<br />
+<br />
+<u>As variáveis possíveis são:</u><br />
+Número do chamado: %numero%<br />
+Patrimônio do equipamento: %patrimonio%<br />
+Data de Abertura: %data_abertura%<br />
+URL Global: %url%<br />
+Status do chamado: %status%<br />
+Usuário: %usuario%<br />
+Contato: %contato%<br />
+Descriçao do chamado: %descricao%<br />
+Setor origem do chamado: %setor%<br />
+Ramal: %ramal%<br />
+Área técnica responsável pelo chamado: %area%<br />
+Operador: %operador%<br />
+Quem abriu o chamado no sistema: %aberto_por%<br />
+Problema: %problema%<br />
+Versão do OcoMon: %versao%<br />
+URL para acesso ao OcoMon: %site%
+    </div>
+  </body>
+</html>

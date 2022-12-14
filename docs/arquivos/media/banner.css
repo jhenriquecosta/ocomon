@@ -1,0 +1,34 @@
+body 
+{ 
+	/*background-color: #CCCCFF; */
+	background-image:url('main_bar.png');
+	/*background-repeat: repeat;*/
+	margin: 0px; 
+	padding: 0px;
+}
+
+/* Banner (top bar) classes */
+
+.banner {  }
+
+.banner-menu 
+{ 
+	clear: both;
+	padding: .5em;
+	/*border-top: 2px solid #6666AA;*/
+}
+
+.banner-title 
+{ 
+	text-align: left; 
+	font-size: 20pt; 
+	font-weight: bold; 
+	margin: .2em;
+}
+
+.package-selector 
+{ 
+	background-color: #AAAADD; 
+	border: 1px solid black; 
+	color: yellow;
+}

@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>ocomonphp &raquo; usuarios</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<strong>Usuários</strong><br />
+<br />
+Nesse menu é possível visualizar todos os usuários/operadores cadastrados no sistema.<br />
+<br />
+A opção <strong>Resumo</strong> permite visualizar um quadro resumido da quantidade de usuários/operadores em cada categoria do sistema, bem como, exibe a listagem de requisições pendentes de confirmação de cadastro. Essas requisições são oriundas do auto-cadastro para usuários de nível somente abertura e são listadas aqui caso ainda não tenham sido confirmadas (através do link de confirmação enviado ao usuário logo após ele efetuar a solicitação de cadastro) pelo usuário solicitante. Através dessa tela é possível realizar a confirmação ou excluí-la do sistema.<br />
+<br />
+A partir da tela de resumo, é possível também ter acesso à listagem de usuários de uma categoria específica, bastando clicar no link da categoria desejada.<br />
+<br />
+<strong>Cadastro de usuários</strong>: Admin -&gt; Usuários -&gt; Novo<br />
+<br />
+<u>Campo Login</u>: informar o login de acesso do novo usuário.<br />
+<br />
+<u>Campo Nível</u>: selecionar o nível de acesso ao sistema. Níveis possíveis:<br />
+
+<ul>
+    <li>Administrador: nível que terá acesso irrestrito a todas funções do sistema;</li>
+    <li>Operador: nível que terá acesso apenas aos <a class="wiki_link" href="permissoes.html">módulos vinculados</a> à sua área primária de atendimento.</li>
+    <li>Contabilidade: esse nível não tem função definida no sistema, apenas é mantido para fins de compatibilidade entre versões do sistema.</li>
+    <li>Desabilitado: esse nível bloqueia acesso ao sistema.</li>
+    <li>Somente abertura: esse nível é dedicado a usuários que apenas executarão função de abrir e visualizar seus próprios chamados no sistema. É o nível atribuído a usuários finais. A partir da versão <strong>2.0RC4</strong>, O usuário final pode adicionar comentários às ocorrências que ele tiver acesso. Para isso, basta que ele acesso os detalhes da ocorrência, clicar no botão &quot;Inserir comentário&quot; e adicionar a informação desejada. Após isso é necessário clicar no botão &quot;Cadastrar&quot;.</li>
+</ul>
+
+<br />
+<u>Campo Nome</u>: Nome completo do usuário/operador.<br />
+<br />
+<u>Campo Senha</u>: senha para acesso ao sistema;<br />
+<br />
+<u>Campo Data do Cadastro</u>: Esse campo é preenchido automaticamente pelo sistema;<br />
+<br />
+<u>Campo Data da Contratação</u>: Data da contratação do usuário;<br />
+<br />
+<u>Campo E-mail</u>: e-mail para o qual serão enviadas as notificações do sistema nos casos devidos;<br />
+<br />
+<u>Campo Telefone</u>: telefone de contato do usuário;<br />
+<br />
+<u><a class="wiki_link" href="areas.html">Campo Área primária</a></u>: área principal do usuário. O acesso aos módulos do sistema dependerá da definição dessa área.<br />
+<br />
+<u>Checkbox Administrador da área</u>: esse checkbox ainda não tem função aplicada, terá funções associadas no futuro.<br />
+<br />
+<u>Áreas secundárias</u>: outras área que o usuário/operador faça parte. Ao definir áreas secundárias ao usuário, todos os chamados direcionados a essas áreas serão visíveis ao usuário na <a class="wiki_link" href="oco-main-screen.html">tela principal do sistema</a>.
+    </div>
+  </body>
+</html>

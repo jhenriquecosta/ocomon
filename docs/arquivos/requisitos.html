@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>ocomonphp &raquo; requisitos</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<strong>ATENÇÃO:</strong><br />
+Se você deseja instalar o OcoMon por conta própria, é necessário que saiba o que é um servidor WEB e conheça o processo genérico de instalação de sistemas WEB. Além disso, é necessário ter conhecimento mínimo em MySQL (processo de criação de banco e importação de tabelas bem como criação de usuários e permissões de acesso) e PHP.<br />
+<br />
+Caso não tenha os requisitos citados, recomendo que encarregue a tarefa de instalação do OcoMon a outra pessoa que atenda os mesmos.<br />
+<br />
+<br />
+<strong>REQUISITOS</strong><br />
+<br />
+
+<ul>
+    <li>Sistema Operacional: Independente;</li>
+    <li>Servidor Web (preferencialmente Apache);</li>
+    <li>Linguagem: PHP versão:4.3x ou superior (testado até o PHP 5), HTML, CSS, Javascript;</li>
+    <li>Banco de dados: MySQL versão: 4.1x ou superior;</li>
+    <li>Navegador: Embora o sistema também funcione no Internet Explorer (com algumas limitações de layout), recomendo fortemente a utilização do mesmo no Firefox. Os principais testes do Ocomon são realizados utilizando o Firefox pois é um navegador multi-plataforma e bastante confiável. <strong>USE O OCOMON COM O FIREFOX!!</strong> :-)</li>
+</ul>
+
+<br />
+<strong><u>Notas importantes:</u></strong><br />
+<br />
+
+<ul>
+    <li>Para o sistema funcionar adequadamente é necessário que seu navegador permita que sistema rode funções <strong>javascript</strong> e aceite os cookies do sistema.</li>
+    <li>Para a visualização dos gráficos é necessário que o PHP esteja compilado com suporte à biblioteca <strong>GD</strong>;</li>
+    <li>Para o upload de imagens é necessário que essa propriedade esteja habilitada no arquivo de configurações do <strong>PHP (php.ini)</strong>;</li>
+    <li>Para o envio de e-mails o Ocomon pode utilizar um <strong>SMTP</strong> especificado por você. Caso você desabilite a opção de SMTP os e-mails serão enviados utilizando a função &quot;<strong>mail</strong>&quot; do PHP e o arquivo php.ini deve estar configurado corretamente para funcionar de maneira adequada;</li>
+    <li>Até a versão 1.40, é necessário habilitar a diretiva <strong>register_globals</strong> no arquivo de configuração do PHP, do contrário o sistema sequer irá efetuar logon. Nas versões posteriores esse procedimento não é mais necessário.</li>
+    <li>Até a versão 2.0rc3, dependendo da versão do PHP, é necessário habilitar a diretiva <strong>short_open_tag</strong> no arquivo de configuração do PHP. Do contrário, ao tentar acessar o sistema, o mesmo não será interpretado pelo PHP e será exibida sua codificação na tela.</li>
+</ul>
+
+
+    </div>
+  </body>
+</html>

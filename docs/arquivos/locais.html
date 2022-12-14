@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>ocomonphp &raquo; locais</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<strong>Locais</strong> (admin -&gt; Locais)<br />
+<br />
+No OcoMon todo chamado aberto ou equipamento cadastrado é associado a um <a class="wiki_link" href="abertura-chamados.html#abertura-local">local</a>. Cada local representa um departamento/setor da empresa.<br />
+Exemplo de locais: Contabilidade, Almoxarifado, Recursos Humanos, sala da Diretoria, etc...<br />
+<br />
+<strong>Cadastro de local</strong> (admin -&gt; Locais -&gt; Incluir local)<br />
+<br />
+<u>Campo Local</u>: é o local propriamente dito. Ex: Almoxarifado.<br />
+<a name="predio"></a><br />
+<u>Campo prédio</u>: é o prédio no qual o local está localizado. Para cadastrar prédios basta clicar no botão &quot;Novo&quot; ao lado direito do campo prédio. Para visualizar/editar os prédios cadastrados basta clicar no botão &quot;Novo&quot; -&gt; Listagem geral.<br />
+<a name="reitoria"></a><br />
+<u>Reitoria</u>: esse campo foi concebido pensando em sua utilização dentro de um ambiente educacional. Se esse não for o seu caso, você pode <a class="wiki_link" href="adm-config-geral.html#idioma">renomeá-lo</a> de acordo com a sua realidade. De modo geral, o campo Reitoria pode agrupar uma série de locais em função de uma mesma administração. Para cadastrar novas reitorias basta clicar no botão &quot;Novo&quot; ao lado direito do campo reitoria. Para visualizar/editar as reitorias cadastradas basta clicar no botão &quot;Novo&quot; -&gt; Listagem geral.<br />
+<a name="dominio"></a><br />
+<u>Domínio</u>: é o domínio de rede acessado através desse local. Essa informação é válida para realizar agrupamento de equipamentos x domínio na rede. Para cadastrar novos domínios basta clicar no botão &quot;Novo&quot; ao lado direito do campo domínio. Para visualizar/editar os domínios cadastradas basta clicar no botão &quot;Novo&quot; -&gt; Listagem geral.<br />
+<a name="prioridade"></a><br />
+<u>Prioridade de Resposta</u>: o OcoMon vincula os locais a níveis de SLA. Dessa forma é possível priorizar o atendimento a locais considerados mais críticos dentro da organização. Ex: O nível de atendimento para o local Almoxarifado deve ser maior do que para o local Diretoria (quanto menor o nível mais urgente ele é).<br />
+Para criar/editar níveis de prioridade é necessário acessar: Admin -&gt; Ocorrências -&gt; <a class="wiki_link" href="prioridades.html">Prioridades</a><br />
+<br />
+<u>Campo Status</u>: esse campo só é visível na opção de edição do local. É utilizado para definir se o local continua válido no sistema.
+    </div>
+  </body>
+</html>

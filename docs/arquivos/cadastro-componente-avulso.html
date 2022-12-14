@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>ocomonphp &raquo; cadastro-componente-avulso</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<strong>Cadastro de Componentes Avulsos</strong> (Inventário -&gt; Cadastrar -&gt; Componente avulso)<br />
+<br />
+Um componente avulso é qualquer componente físico e passível de identificação única que possa ser agregado a um equipamento.<br />
+Ex: placa de rede, HD, leitor biométrico, placa PLC, etc...<br />
+<br />
+Nessa tela é possível cadastrar componentes que já existem fisicamente (assim como o <a class="wiki_link" href="cadastro-equipamento.html">cadastro de equipamento</a>) em estoque ou agregados a algum equipamento.<br />
+<br />
+<img src="files/cadastro-item-estoque.png" alt="cadastro-item-estoque.png" title="cadastro-item-estoque.png" /><br />
+<em>Tela de cadastro de itens avulsos - versão 2.0rc3</em><br />
+<br />
+<strong>01</strong> <em>-</em> Campo Tipo: aqui deve ser selecionado o tipo de componente a ser cadastrado. Caso o tipo desejado não exista ainda, basta cadastrá-lo em Admin -&gt; Inventário -&gt; Componentes<br />
+<br />
+<strong>02</strong> - Campo Modelo: campo para seleção do modelo do componente a ser cadastrado. Para cadastrar modelos, acesse através da tela de cadastro de equipamentos no botão &quot;Incluir Componente&quot; ou através da listagem geral de componentes avulsos no botão &quot;Incluir modelo de componente&quot;.<br />
+<br />
+<strong>03</strong> - Número de série do componente.<br />
+<br />
+<strong>04</strong> - Local onde o componente está alocado. Para saber mais sobre locais, acesse a <a class="wiki_link" href="locais.html">página sobre o assunto</a>.<br />
+<br />
+<strong>05</strong> - Unidade do componente. Entenda o funcionamento deste campo na <a class="wiki_link" href="unidades.html">página sobre o assunto</a>.<br />
+<br />
+<strong>06</strong> - Etiqueta de identificação do componente. Caso o componente possua alguma etiqueta com valor único de identificação.<br />
+<br />
+<strong>07</strong> - Part-Number do componente.<br />
+<br />
+<strong>08</strong> - Selecione aqui o fornecedor do componente. Para cadastrar fornecedores acesse o menu Admin -&gt; Inventário -&gt; Fornecedores.<br />
+<br />
+<strong>09</strong> - Número da nota fiscal de compra do componente. Útil para os casos de acionamento de garantia.<br />
+<br />
+<strong>10</strong> - Valor de compra do componente.<br />
+<br />
+<strong>11</strong> - Data de compra. O OcoMon se baseará na data de compra e no tempo de garantia para calcular o período de garantia do componente.<br />
+<br />
+<strong>12</strong> - Tempo em meses. Selecione aqui o tempo de garantia do componente. O OcoMon utilizará em informação juntamente com a data de compra para calcular o período de garantia do componente.<br />
+<br />
+<strong>13</strong> - Centro de Custo: Selecione o <a class="wiki_link" href="centro-custo.html">centro de custo</a> do componente.<br />
+<br />
+<strong>14</strong> - Selecione a situação do equipamento quanto ao seu estado de conservação. Para cadastrar situações acesse o menu Admin -&gt; Inventário -&gt; Situações.<br />
+<br />
+<strong>15</strong> - Comentário. Coloque aqui outras informações relevantes.<br />
+<br />
+<u>Os campos a seguir são relacionados ao equipamento em que o componente está agregado.</u><br />
+<br />
+<strong>16</strong> - Unidade: é a unidade do equipamento em que o componente está agregado.<br />
+<br />
+<strong>17</strong> - Etiqueta: é a etiqueta de patrimônio do equipamento em que o componente está agregado.
+    </div>
+  </body>
+</html>

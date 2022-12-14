@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <title>ocomonphp &raquo; email-mensagens</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<strong>Configuração de mensagens para envio de e-mail pelo Ocomon</strong> (Admin -&gt; Configurações -&gt; E-mail-Mensagens)<br />
+<br />
+Você pode customizar as mensagens de e-mail, enviadas de forma <strong>automática</strong> pelo Ocomon, em qualquer um dos eventos específicos do sistema:<br />
+<br />
+<strong>Os eventos possíveis são:</strong><br />
+<br />
+<br />
+<u>abertura-para-usuario</u>: E-mail enviado para o usuário-final no momento em que um chamado é aberto no sistema;<br />
+<br />
+<u>abertura-para-area</u>: E-mail enviado para a área de atendimento no momento em que um chamado é aberto no sistema;<br />
+<br />
+<u>encerra-para-area</u>: E-mail enviado para a área de atendimento no momento em que o um chamado é encerrado no sistema;<br />
+<br />
+<u>encerra-para-usuario</u>: E-mail enviado para o usuário-final no momento em que o um chamado é encerrado no sistema;<br />
+<br />
+<u>edita-para-area</u>: E-mail enviado para a área de atendimento no momento em que o um chamado é editado no sistema;<br />
+<br />
+<u>edita-para-usuario</u>: E-mail enviado para o usuário-final no momento em que o um chamado é editado no sistema;<br />
+<br />
+<u>edita-para-operador</u>: E-mail enviado para o operador/técnico no momento em que o um chamado é editado no sistema;<br />
+<br />
+<u>cadastro-usuario</u>: E-mail enviado para o usuário-final para confirmação de cadastro para abertura de chamados no sistema.<br />
+<br />
+<u>cadastro-usuario-from-admin</u>: E-mail enviado para o usuário-final para confirmação de cadastro quando o cadastro for confirmado diretamente através da interface administrativa do sistema.<br />
+<br />
+<u>mail-about-warranty</u>: E-mail enviado para uma área pré-definida informando sobre o vencimento de garantia de equipamentos.<br />
+<br />
+<u>Abertura-para-operador</u>: E-mail enviado para um técnico toda vez que receber um encaminhamento de chamado diretamente na tela de abertura do mesmo.<br />
+<br />
+<br />
+<strong>As opções de configuração são:</strong><br />
+<br />
+<u>FROM</u>: Será o &quot;nome&quot; do endereço de e-mail que aparecerá como remetente da mensagem;<br />
+<br />
+<u>Responder para</u>: endereço de resposta do e-mail;<br />
+<br />
+<u>Assunto</u>: será o campo &quot;assunto&quot; da mensagem enviada;<br />
+<br />
+<u>Mensagem HTML</u>: texto que será enviado nas mensagens de e-mail se a opção de conteúdo HTML estiver habilitada;<br />
+<br />
+<u>Mensagem alternativa</u>: texto que será enviado nas mensagens de e-mail se a opção de conteúdo HTML estiver desabilitada.<br />
+<br />
+<br />
+<strong>Você pode utilizar variáveis de ambiente para customizar as mensagens de e-mail:</strong><br />
+<br />
+As variáveis possíveis são:<br />
+<br />
+%area%: área técnica para atendimento do chamado;<br />
+<br />
+%assentamento%: assentamento definido durante uma edição do chamado;<br />
+<br />
+%contato%: campo contato;<br />
+<br />
+%descricao%: campo descrição do chamado;<br />
+<br />
+%editor%: usuário logado que está editando um chamado;<br />
+<br />
+%fornecedor%: fornecedor do equipamento;<br />
+<br />
+%linkconfirma%: link para confirmação do auto-cadastro de usuário somente abertura;<br />
+<br />
+%local%: localização do equipamento (componentes avulsos);<br />
+<br />
+%login%: só tem valor se for utilizado na mensagem de confirmação de cadastro;<br />
+<br />
+%modelo%: modelo do equipamento;<br />
+<br />
+%notafiscal%: número da nota fiscal de compra do equipamento;<br />
+<br />
+%numero%: número do chamado;<br />
+<br />
+%operador%: operador técnico do chamado;<br />
+<br />
+%partnumber%: partnumber do componente (para mensagens sobre o vencimento de garantia);<br />
+<br />
+%problema%: problema classificado para o chamado;<br />
+<br />
+%ramal%: telefone de contato do usuário que solicitou a abertura do chamado;<br />
+<br />
+%serial%: número de série do equipamento (até a versão 2.0rc3, apenas de componentes);<br />
+<br />
+%setor%: local/departamento do usuário que solicitou a abertura do chamado;<br />
+<br />
+%site%: endereço do sistema Ocomon na sua empresa (definido no arquivo config.inc.php);<br />
+<br />
+%solucao%: solução adotada para o chamado;<br />
+<br />
+%usuario%: dependendo do evento será o próprio usuário-final que abriu o chamado;<br />
+<br />
+%tipo%: tipo do equipamento. Interessante para os casos de mensagens sobre vencimento de garantia;<br />
+<br />
+%vencimento%: data de vencimento da garantia do equipamento/componente;<br />
+<br />
+%versao%: versão do Ocomon.
+    </div>
+  </body>
+</html>

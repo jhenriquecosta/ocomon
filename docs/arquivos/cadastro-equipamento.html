@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <title>ocomonphp &raquo; cadastro-equipamento</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<strong>Cadastro de equipamentos</strong> (Inventário -&gt; Cadastrar -&gt; Equipamento)<br />
+<br />
+Através dessa tela é possível cadastrar equipamentos, modelos de equipamentos, componentes e modelos de configuração de equipamentos.<br />
+<br />
+<img src="files/cadastro-equipamento-01.png" alt="cadastro-equipamento-01.png" title="cadastro-equipamento-01.png" style="height: 550px; width: 870px;" /><br />
+<em>Tela de cadastro de equipamentos - versão 2.0rc3</em><br />
+<br />
+<strong>01</strong> - Tipo de equipamento: essa caixa serve para selecionar o tipo de equipamento que se está cadastrando. Exemplos de tipos de equipamentos: computador, notebook, monitor, impressora, etc..<br />
+Novos tipos de equipamentos podem ser cadastrados no menu Admin -&gt; Inventário -&gt; Equipamentos<br />
+<br />
+<strong>02</strong> - Fabricante: selecione aqui o fabricante do equipamento. Novos fabricantes podem ser cadastrados no menu Admin -&gt; Inventário -&gt; Fabricantes<br />
+<br />
+<strong>03</strong> - Etiqueta: informe aqui o número da etiqueta de patrimônio do equipamento. A etiqueta, juntamente com o campo Unidade, formará o identificador único de cada equipamento. Somente são aceitos valores numéricos inteiros para o campo etiqueta. Caso ache necessário a utilização de caracteres alfanuméricos nesse campo, utilize o campo <a class="wiki_link" href="unidades.html">unidade</a> para isso.<br />
+<br />
+<strong>04</strong> - Número de série do equipamento. São aceitos caracteres alfanuméricos nesse campo.<br />
+<br />
+<strong>05</strong> - Modelo do equipamento. Você pode selecionar o modelo do equipamento a partir da listagem exibida ou então cadastrar novo modelo clicando no botão &quot;Novo&quot; ao lado direito da caixa de seleção. Ao cadastrar um novo modelo será necessário recarregar a página para que o mesmo apareça na caixa de seleção.<br />
+<br />
+<strong>06</strong> - Cadastro de modelo: ao clicar no botão &quot;Novo&quot; será exibida uma janela com a listagem de todos os modelos já cadastrados no sistema, a apartir dessa tela é possível cadastrar novos modelos ou editar as informações já cadastradas.<br />
+Para cadastrar um modelo basta clicar no link &quot;Cadastrar modelo&quot;.<br />
+
+<ul>
+    <li>Campo Nome: é a descrição do modelo a ser cadastrado. Ex: Optiplex GX 370</li>
+    <li>Campo Tipo de equipamento: selecione o tipo de equipamento a qual o modelo se refere.</li>
+    <li>Campo Anexar imagem: é possível gravar uma ou mais imagens referentes ao modelo que se está cadastrando, dessa forma, equipamentos do mesmo modelo terão a mesma imagem associada. Para adicionar mais imagens ou excluir imagens já associadas basta exibir a listagem completa de modelos e editar o modelo em questão.</li>
+</ul>
+
+<br />
+<strong>07</strong> - Local onde está alocado o equipamento. Para maiores informações sobre a função desse campo acesse a página referente a <a class="wiki_link" href="locais.html">locais</a>.<br />
+<br />
+<strong>08</strong> - Carregar Configuração: o OcoMon permite o cadastro prévio de configurações específica dos modelos de equipamentos existentes, facilitando o processo de cadastro de equipamentos de mesmo modelo. Para carregar um modelo de configuração previamente cadastrado, basta selecionar o modelo do equipamento e clicar no &quot;Carregar Configuração&quot;, dessa forma, todas as configurações de hardware serão preenchidas automaticamente no formulário de cadastro de equipamento.<br />
+<br />
+<strong>09</strong> - Esse botão permite o cadastro de configurações para modelos de equipamentos. O formulário é similar ao formulário de cadastro de equipamentos. Para exibir a listagem dos modelos que já possuem configuração cadastrada ou alterar as informações de configuração do modelo basta clicar no link &quot;Lista os modelos de configuração já cadastrados&quot;.<br />
+<br />
+<strong>10</strong> - Campo Situação. Cada equipamento cadastrado no sistema é associado à uma situação quanto ao seu estado físico. Por exemplo, um equipamento pode ser classificado com situação operacional ou sucateado. Para cadastrar situações, acesse o menu Admin -&gt; Inventário -&gt; Situações.<br />
+<br />
+<strong>11</strong> - Anexar imagem. Diferente da inclusão de imagens por modelo, onde as imagens ficam vinculadas a todos os equipamentos do modelo, nesse é possível vincular imagens especificamente a um equipamento. Para adicionar mais imagens a um equipamento basta acessar o menu de edição das informações do equipamento e selecionar a imagem através do campo Anexar imagem.<br />
+<br />
+<strong>12</strong> - Nome do computador. Nome de rede do equipamento.<br />
+<br />
+<strong>13 a 23</strong> - Esses campos são referentes à configuração de hardware do equipamento que está sendo cadastrado. Os tipos de componentes são fixos nesse formulário porém é possível cadastrar tipos diferentes de componentes aos quais chamados de <u>componentes avulsos</u>. Para saber mais sobre a utilização de <a class="wiki_link" href="cadastro-componente-avulso.html">componentes avulsos</a>, acesse a página sobre o assunto.<br />
+<br />
+Para cadastrar um <strong>modelo de componente</strong> (fixo ou avulso) basta clicar no botão <strong>Incluir Componente</strong> no formulário de cadastro de equipamentos.<br />
+Campos necessários para o cadastro de modelo de componente:<br />
+<br />
+- <u>Tipo</u>: selecione o tipo de componente para qual o modelo está sendo cadastrado.<br />
+<br />
+- <u>Fabricante</u>: Informe o nome do fabricante do modelo que está sendo cadastrado.<br />
+<br />
+- <u>Modelo</u>: é a descrição do modelo propriamente dita. Ex: 3c 905C-TX (exemplo de um modelo de placa de rede 3Com).<br />
+<br />
+- <u>Capacidade</u>: é um valor inteiro correspondente à capacidade do componente. Ex: para um HD de 120GB, o valor de capacidade será 120. Para um processador de 2.0 GHZ, o valor de capacidade será 2 ou 2000 dependendo do item que veremos a seguir: <strong>sufixo</strong>.<br />
+<br />
+- <u>Sufixo</u>: nesse campo deve ser informada a unidade de medida para o valor informado como capacidade no item anterior. São consideradas unidades válidas: MB, GB, MHZ, etc..<br />
+<br />
+<strong>24</strong> - Tipo de impressora: esse campo deve ser selecionado <strong>apenas</strong> se o tipo de equipamento for impressora.<br />
+<br />
+<strong>25</strong> - Monitor: esse campo deve ser selecionado <strong>apenas</strong> se o tipo de equipamento for monitor.<br />
+<br />
+<strong>26</strong> - Scanner: esse campo deve ser selecionado <strong>apenas</strong> se o tipo de equipamento for scanner.<br />
+<br />
+Os itens <strong>24,25 e 26</strong> são legados da primeira versão do módulo de inventário do sistema, a tendência é que eles deixem de existir otmizando o formulário de cadastro de equipamentos.<br />
+<br />
+<strong>27</strong> - Campo unidade. Esse campo, juntamente com o número da etiqueta do equipamento formam o identificador único do equipamento no sistema. Para saber mais sobre o papel do campo <a class="wiki_link" href="unidades.html">unidade</a>, acesse a página referente a esse assunto.<br />
+<br />
+<strong>28</strong> - Campo para seleção do <a class="wiki_link" href="centro-custo.html">Centro de custo</a> do equipamento que está sendo cadastrado.<br />
+<br />
+<strong>29</strong> - Fornecedor. Campo para seleção do fornecedor do equipamento. Novos fornecedores podem ser cadastrados através do menu Admin -&gt; Inventário -&gt; Fornecedores.<br />
+<br />
+<strong>30</strong> - Campo para informar a nota fiscal de compra do equipamento.<br />
+<br />
+<strong>31</strong> - Campo para informar o valor de compra do equipamento.<br />
+<br />
+<strong>32</strong> - Data da Compra: esse campo é importante pois é a apartir dessa informação em conjunto com o tempo de garantia que é calculado o período de garantia do equipamento.<br />
+<br />
+<strong>33</strong> - Tipo de garantia: Campo para seleção do tipo de garantia do equipamento.<br />
+<br />
+<strong>34</strong> - Tempo de garantia: seleção do tempo de garantia do equipamento. Essa informação é associada com a data de compra para o cálculo do período de garantia do equipamento. Novos tempos de garantia podem ser cadastrados em Admin -&gt; Inventário - &gt; Garantias.<br />
+<br />
+<strong>35</strong> - Campo para comentários diversos sobre o equipamento.
+    </div>
+  </body>
+</html>

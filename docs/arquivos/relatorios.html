@@ -1,0 +1,145 @@
+<html>
+  <head>
+    <title>ocomonphp &raquo; relatorios</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<strong>Relatórios e Estatísticas</strong><br />
+<br />
+<u><strong>SLAs</strong>:</u> Considero esse o relatório mais importante do OcoMon. Através desse relatório é possível obter as informações sobre os tempos de resposta e solução de um dado período bem como verificar se estes atenderam as expectativas de SLA. Esse relatório pode servir de base para a tomada de decições sobre os processos de atendimento, identificando problemas e possíveis soluções.<br />
+<br />
+<img src="files/slas-01.png" alt="slas-01.png" title="slas-01.png" style="height: 301px; width: 879px;" /><br />
+<em>Relatório de SLAs - versão 2.0rc3</em><br />
+<br />
+<strong>Entendendo as informações:</strong><br />
+<br />
+<u>Número</u>: é o número da ocorrência/chamado, ao clicar no número será exibida uma nova tela com os detalhes da ocorrência.<br />
+<br />
+<u>Tempo válido Resposta</u>: é o tempo decorrido desde a abertura do chamado até sua primeira resposta. Somente é considerado o tempo válido, isto é, são desconsiderados os períodos fora do horário de atendimento, <a class="wiki_link" href="feriados.html">feriados</a> e finais de semana.<br />
+<br />
+<u>Tempo válido Solução</u>: é o tempo decorrido desde a abertura do chamado até sua conclusão no sistema. Assim como no tempo de resposta, somente é considerado o tempo válido do período.<br />
+<a name="tempo-resposta"></a><br />
+<u>SLA Reposta</u>: é o tempo esperado como tempo de reposta para o chamado em questão. Esse tempo é baseado no setor origem do chamado.<br />
+<br />
+<u>SLA Solução</u>: é o tempo esperado para conclusão do chamado em questão. Esse tempo é baseado no tipo de problema para qual o chamado foi classificado.<br />
+<br />
+<u>Resposta</u>: esse semáforo indica se o tempo de resposta atingido pelo chamado está dentro do esperado ou não. Existem 3 tipos possíveis de semáforos:<br />
+
+<ul>
+    <li>verde: quando o tempo atingido estiver dentro do esperado;</li>
+    <li>laranja: quando o tempo atingido for até 20% superior ao esperado;</li>
+    <li>vermelho: quando o tempo atingido for superior a 20% do esperado;</li>
+</ul>
+
+<br />
+<u>Solução</u>: esse semáforo indica se o tempo de solução atingido pelo chamado está dentro do esperado ou não. A legenda dos semáforos é idêntica à citada à cima.<br />
+<br />
+<u>Sol - Resp</u>: esse semáforo indica o tempo de solução do chamado a partir da primeira resposta e não a partir da abertura do mesmo.<br />
+<br />
+<u>Dependência ao usuário</u>: o tempo em que o chamado esteve nesse tipo de dependência é descontado do tempo total de vida do chamado. Esse tipo de situação é útil quando existe algum impedimento por parte do usuário solicitante impossibilitando a conclusão da ocorrência por parte da equipe técnica.<br />
+<br />
+<u>Dependência de terceiros</u>: o sistema contabiliza o tempo em que os chamados permanecem pendentes em função de terceiros, no entanto esse tempo não é descontado do tempo total do chamado visto que não é da responsabilidade do usuário.<br />
+<br />
+<u>Fora de dependência</u>: o tempo em que o chamado esteve com esse tipo de dependência também é descontado do tempo geral do chamado.<br />
+<br />
+<a class="wiki_link" href="status.html">Para maiores informações sobre o funcionamento dos níveis de dependência acesse a página de informações dos tipos de status dos chamados.</a><br />
+<br />
+<img src="files/slas-02.png" alt="slas-02.png" title="slas-02.png" /><br />
+<em>Resumo das informações do relatório de SLAs - versão 2.0rc3</em><br />
+<br />
+<strong>Resumo das informações</strong><br />
+<br />
+A tela à cima exibe o resumo das informações sobre os chamados do período informado.<br />
+<br />
+<hr />
+<br />
+<hr />
+<br />
+<u><strong>Problemas por área de atendimento</strong></u><br />
+<br />
+Esse relatório retorna a quantidade de chamados por problema em um dado período. É possível selecionar chamados de uma área de atendimento específica ou de todas as áreas cadastradas. É útil para identificar os principais problemas que ocorrem no parque e avaliar possíveis ações preventivas.<br />
+<br />
+<hr />
+<br />
+<hr />
+<u><strong>Locais mais atendidos</strong></u><br />
+<br />
+Agrupa os chamados de um dado período por seus locais/setores de origem. É possível selecionar chamados de uma área de atendimento específica ou de todas as áreas cadastradas. A partir desse relatório pode-se perceber , por exemplo, a necessidade de treinamento para algum departamento em específico dentro da organização.<br />
+<br />
+<hr />
+<br />
+<hr />
+<u><strong>Geral</strong></u><br />
+<br />
+Esse relatório permite a utilização de uma série de critérios para pesquisa. O resultado é uma listagem, por período, de todos os chamados que atenderem os critérios estipulados para sua geração.<br />
+<br />
+Esse relatório permite a saída em dois formatos diferentes, para isso basta selecionar o campo &quot;Tipo de Relatório&quot;.<br />
+<br />
+Até a versão 2.0rc3, a logomarca que aparece ao selecionar o tipo de relatório: &quot;Relatório 1 linha&quot; está fixa no código do sistema, porém sua alteração é simples, para isso basta substituir os logos (arquivos de imagens) que estão no diretório de instalação do OcoMon, na pasta includes/logos por suas imagens, mantendo o mesmo nome e tamanho (preferencialmente).<br />
+<br />
+<hr />
+<br />
+<hr />
+<u><strong>Relatório de chamados por equipamentos</strong></u><br />
+<br />
+Defina uma área de atendimento (ou todas) e um período e o retorno será um quadro dos chamados do período informado agrupados por equipamento. Esse relatório é útil para identificar reincidências.<br />
+<br />
+<u>Dica</u>: ao clicar no número de qualquer etiqueta listada (coluna etiqueta) será aberta uma janela com as informações de configuração do equipamento. A partir dessa tela (de configuração) é possível ter acesso direto às suas ocorrências clicando no link superior: &quot;<strong>Ocorrências</strong>&quot;.<br />
+<br />
+<hr />
+<br />
+<hr />
+<u><strong>Gerência do Helpdesk</strong></u><br />
+<br />
+O objetivo desse relatório é retornar um compilado com as principais informações dos chamados dentro do período informado. Atualmente (versão 2.0rc3) esse relatório <strong>não está concluído</strong>.<br />
+<br />
+<hr />
+<br />
+<hr />
+<u><strong>Atendimentos por técnico</strong></u><br />
+<br />
+Esse relatório retorna um quadro com o total de ocorrências de um dado período agrupadas por técnico/operador. Essa informação considera que o técnico/operador que <strong>concluiu</strong> o chamado no sistema.<br />
+<br />
+<hr />
+<br />
+<hr />
+<u><strong>Atendimentos por usuário</strong></u><br />
+<br />
+Esse relatório retorna um quadro com o total de ocorrências de um dado período agrupadas pelo usuário solicitante (campo <strong>Contato</strong>, na tela de <a class="wiki_link" href="abertura-chamados.html">abertura de chamados</a>) do chamado.<br />
+<br />
+<hr />
+<br />
+<hr />
+<u><strong>Quantidade de chamados: Área x Período</strong></u><br />
+<br />
+Esse relatório retorna um quadro com o total de chamados por área de atendimento em um dado período.<br />
+<br />
+<u>Dica</u>: ao clicar no número de chamados fechados, será exibida a listagem dessas ocorrências.<br />
+<br />
+<hr />
+<br />
+<hr />
+<u><strong>Chamados abertos pelo usuário final</strong></u><br />
+<br />
+Esse relatório retorna um quadro com o total de chamados abertos pelo <strong>usuário final</strong> em um dado período. Também é possível verificar os SLAs alcançados especificamente para esses chamados, para isso clique no link <strong>SLA's</strong> na mensagem &quot;Verifique os SLA's atendidos&quot;.<br />
+<br />
+<strong>Dica</strong>: ao clicar no número correspondente à quantidade de chamados serão exibidos todos os chamados abertos pelo respectivo usuário final.<br />
+<br />
+<hr />
+<br />
+<hr />
+<u><strong>Quantidade de chamados x categoria de problema</strong></u><br />
+<br />
+Esse, juntamente com o relatório de SLAs é um dos mais importante para o gerenciamento de chamados. A partir desse relatório é possível visualizar as ocorrências agrupadas por suas <a class="wiki_link" href="problemas.html#categorias">categorias</a> e sub-classificações de um dado período.<br />
+<br />
+<strong>Dica</strong>: ao clicar no número correspondente à quantidade de ocorrências será exibida a listagem dos respectivos chamados.<br />
+<br />
+<hr />
+<br />
+<hr />
+
+    </div>
+  </body>
+</html>

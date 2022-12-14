@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>ocomonphp &raquo; areas</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<strong>Áreas</strong><br />
+<br />
+O OcoMon trabalha com o conceito de áreas de atendimento com forma de criar diferentes grupos de operadores/técnicos utilizadores do sistema. De forma geral, a seleção da área de atendimento na abertura de um chamado define qual grupo de usuários será notificado e visualizará a ocorrência na tela principal do sistema.<br />
+<br />
+<em>Cadastro de uma área (Admin -&gt; Ocorrências -&gt; Áreas)</em><br />
+<br />
+<u>Campo Área</u>: é o nome a ser atribuído à nova área de atendimento;<br />
+<br />
+<u>Checkbox Atende chamados</u>: esse item vem marcado por padrão, indica que a área poderá utilizar as funções de abertura, edição e encerramento de chamados no sistema. Esse checkbox deverá ser desmarcado apenas para criação de áreas com perfil de <strong>somente abertura de chamados</strong> (usuário final);<br />
+<br />
+<strong>Novo</strong>: A partir da versão <strong>2.0RC4</strong> o OcoMon permite a utilização simultânea de mais de uma área de nível somente abertura.<br />
+<br />
+<u>Campo e-mail</u>: endereço de e-mail da área. Em geral é informado um alias referente a todos os usuários que deverão receber os e-mails direcionados à essa área.<br />
+<br />
+<u>Campo Tela para Abertura de chamados</u> (a partir da versão <strong>2.0RC4</strong>): Indica qual o <a class="wiki_link" href="admin-perfis.html">perfil de tela de abertura</a> está associado à área. Caso não exista nenhum perfil associado a tela de abertura de chamados para essa área terá todos os campos disponíveis.<br />
+<br />
+Caso queira que a tela de abertura para cada nova área seja customizada, basta associar a um <a class="wiki_link" href="admin-perfis.html">perfil</a> criado (essa função foi adicionada na versão <strong>2.0RC4</strong>).<br />
+<br />
+<u>Status</u>: para a utilização da nova área é necessário marcar o status como ATIVO. Em caso de a área ser extinta, basta modificar o status para INATIVO.<br />
+<br />
+<em>* A vinculação de usuários/operadores às áreas de atendimento ocorre no menu de administração de usuários em <a class="wiki_link" href="usuarios.html">admin -&gt; Usuários</a>.</em><br />
+<br />
+<hr />
+<strong>Atenção</strong>: após a criação de uma nova área, é necessário adicionar as permissões aos módulos que seus usuários terão acesso. Isso deve ser feito em: <a class="wiki_link" href="permissoes.html">Admin -&gt; Permissões</a>.<br />
+<hr />
+
+    </div>
+  </body>
+</html>

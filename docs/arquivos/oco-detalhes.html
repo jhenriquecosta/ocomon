@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>ocomonphp &raquo; oco-detalhes</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<strong>Detalhamento do chamado</strong>:<br />
+<br />
+<img src="files/ocorrencia-detalhes-03.png" alt="ocorrencia-detalhes-03.png" title="ocorrencia-detalhes-03.png" style="height: 358px; width: 884px;" /><br />
+<em>Tela típica de exibição detalhada de uma ocorrência - versão 2.0rc3</em><br />
+<br />
+A tela acima, exibe as informações de uma ocorrência de forma detalhada. Nem todas as opções apresentadas nessa tela são visíveis a todos os usuários. As opções visíveis dependem do nível de permissão do operador/usuário logado ou do contexto do chamado no sistema.<br />
+<br />
+Veremos a seguir cada uma das opções enumeradas acima. As demais informações já foram detalhadas na página que trata sobre a <a class="wiki_link" href="abertura-chamados.html">abertura de chamados</a>.<br />
+<br />
+<strong>Novo</strong>: <u>Visibilidade dos assentamentos</u><br />
+Na versão <strong>2.0RC4</strong> é possível marcar cada assentamento como <strong>Privado</strong> ou não. Assentamentos privados não são visíveis pelo usuário final (Para os casos onde o usuário final tenha acesso às informações da ocorrência). É possível alterar qualquer assentamento como privado ou não a qualquer momento através da tela de edição das ocorrências.<br />
+<br />
+<strong>Novo</strong>: <u>URL Global para acesso às ocorrências por usuário de nível &quot;Somente abertura&quot;</u>;<br />
+[<strong>A partir da versão 2.0RC4</strong>] Por definição, o usuário de nível &quot;Somente abertura&quot; só tem acesso às informações das ocorrências abertas por ele mesmo no sistema. Através da URL global é possível permitir o acesso, para usuário somente abertura, a qualquer ocorrência no sistema. Uma URL global é gerada automaticamente para cada nova ocorrência aberta no sistema e é visível à área técnica na tela de detalhes da ocorrência. Para ocorrências existentes antes da implementação dessa função, basta que o operador clique no link &quot;Gerar link global&quot; (na tela de detalhes da ocorrência) para que o link seja gerado.<br />
+<br />
+<strong>Novo:</strong> Além das informações citadas, <strong>a partir da versão 2.0RC5</strong>, há também um campo referente à prioridade de atendimento do chamado. Para obter maiores informações sobre esse campo acesse a documentação referente a <a class="wiki_link" href="prioridades-atendimento.html">Prioridades de atendimento</a>.<br />
+<br />
+<hr />
+Para que o usuário &quot;Somente abertura&quot; consiga ter acesso à ocorrência através da URL global, é necessário que o mesmo esteja logado no sistema.<br />
+<hr />
+<br />
+<strong>01</strong> - Opção para o encerramento da ocorrência. Ao clicar nesse link, será chamada a tela de encerramento para esse chamado.<br />
+<br />
+<strong>02</strong> - Opção para impressão da ocorrência. Ao clicar nesse link, uma nova janela (ou aba) será aberta com as informações da ocorrência formatadas para impressão (tipo RAT), possibilitando que o técnico tenha os dados da ocorrência em papel e podendo recolher a assinatura do solicitante após a conclusão do atendimento.<br />
+<br />
+<strong>03</strong> - Opção para edição da ocorrência. Ao clicar nesse link será possível alterar ou adicionar informações ao chamado.<br />
+<br />
+<strong>04</strong> - Opção para edição da ocorrência com privilégios de administrador. Ao clicar nesse link, além de possibilitar a alteração das informações da ocorrência, também é possível excluir arquivos que estejam anexados na mesma e desvincular ocorrências relacionadas. Essa opção só fica disponível para usuários com privilégios de administrador do sistema.<br />
+<br />
+<strong>05</strong> - Opção para atendimento da ocorrência. Ao clicar nesse link, será exibida a tela para marcar a ocorrência como &quot;Em Atendimento&quot;. Ao confirmar essa operação, a ocorrência ficará vinculada ao operador logado no sistema e estará sob sua responsabilidade de atendimento.<br />
+<br />
+<strong>06</strong> - Opção para obter as informações sobre os tempos esperados para o chamado. Ao clicar nesse link será exibida uma tela com as informações de tempo de resposta e solução esperados para a ciclo de vida do chamado no sistema. Os tempos de respostas e solução variam de acordo com a definições do ambiente e sistema.<br />
+<br />
+<strong>07</strong> - Opção que possibilita a abertura de sub-chamados para a ocorrência em questão. Ao clicar nesse link, será aberta a tela de abertura de chamados informando que o novo chamado será um sub-chamado da ocorrência já aberta. O Ocomon trata os sub-chamados como dependências que precisam ser solucionadas para permitir que o chamado origem seja concluído. Não há limite para quantidade de sub-chamados. Podem ser criados inclusive sub-chamados de sub-chamados quantas vezes forrem necessárias.<br />
+<br />
+<strong>08</strong> - Opção para exibição do tempo de documentação do chamado. Ao clicar nesse link será exibida uma tela com as informações dos tempos de documentação do chamado por cada técnico e status assumidos pela ocorrência até o instante atual. O tempo de documentação do chamado é todo o tempo gasto nas edições do chamado do sistema, desde a sua criação até o seu encerramento.<br />
+<strong>Por exemplo</strong>: o tempo gasto deste a chamada da tela de encerramento do chamado até o momento em que é clicado no botão de encerrar (após se ter digitado as informações necessárias) é registrado como tempo de documentação.<br />
+<a name="archor-enviar-email"></a><br />
+<strong>09</strong> - Opção que permite o envio de e-mails vinculados à ocorrência em questão. Ao clicar nesse link, será aberto um formulário de envio de e-mail. O(s) destinatário(s) poderá(ão) se selecionado(s) a partir de listas pré-cadastradas ou então informado(s) diretamente no formulário. O texto da mensagem também poderá ser selecionado a partir de modelos pré-cadastrados ou então criado na hora.<br />
+<br />
+<strong>10</strong> - Opção para visualizar as informações do equipamento associado à ocorrência em questão. Ao clicar neste link serão exibidas todas as informações registradas sobre o equipamento para qual a ocorrência foi aberta.<br />
+<br />
+<strong>11</strong> - Opção que permite visualizar o histórico de status do sistema. Ao clicar nesse link será exibida uma tela com a relação de todos os status que a ocorrência já teve e quanto tempo esteve em cada um deles.<br />
+<br />
+<strong>12</strong> - Essa mensagem indica quantos informações extras foram acrescentas à ocorrência desde a sua abertura. Essas informações podem ser exibidas ou ocultadas clicando no ícone com o sinal de &quot;+&quot; ou &quot;-&quot;.<br />
+<br />
+<strong>13</strong> - Essa mensagem informa quantos e-mails foram enviados através da função Enviar e-mail (<strong>item 09</strong>). Todas as mensagens ficam registradas e associadas ao chamado podendo ser listadas ou ocultadas clicando na mensagem <strong>E-mails enviados</strong>. Para ter a visualização detalhada de cada mensagem enviada, basta clicar na mensagem específica.<br />
+<br />
+<strong>14</strong> - Listagem de arquivos anexos ao chamado. Para realizar o download dos arquivos, basta clicar sobre o mesmo. Se o arquivo anexado for uma imagen, é possível visualiza-la diretamente no sistema sem a necessidade de realizar o download. Para isso basta clicar no ícone em forma de lupa que aparece ao lado direito do nome do arquivo.<br />
+<br />
+<strong>15</strong> - Mensagem que informa a existência de sub-chamados da ocorrência em questão. Para visualizar ou ocultar a listagem, basta clicar no ícone em forma de &quot;+&quot; ou &quot;-&quot;. Para ter acesso detalhado a cada sub-chamado basta clicar no número do mesmo.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>ocomonphp &raquo; consulta-especial</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<strong>Consulta especial</strong> (Inventário -&gt; Consultar -&gt; Consulta especial)<br />
+<br />
+A partir dessa tela é possível realizar pesquisas por equipamentos utilizando como filtro qualquer campo desejado ou combinação de diversos campos.<br />
+<br />
+<img src="files/consulta-especial.png" alt="consulta-especial.png" title="consulta-especial.png" /><br />
+<em>Tela de consulta detalhada - versão 2.0rc3</em><br />
+<br />
+É possível realizar a consulta informando mais de um número de <strong>etiqueta</strong>. Basta informar os números separando-os por vírgula.<br />
+<br />
+E possível selecionar mais de uma <strong>unidade</strong> utilizando a tecla CTRL.<br />
+<br />
+O resultado da pesquisa vem formatado por padrão no formato demonstrado na página <a class="wiki_link" href="visualizar-equipamentos.html">visualizar equipamentos</a>. No entanto, é possível selecionar outras formas de exibição no campo &quot;<strong>Formato de saída</strong>&quot;.<br />
+<br />
+<hr />
+Atualmente (até a versão 2.0rc3) os demais formatos trazem as <strong>logomarcas fixadas</strong>, no entanto não é difícil alterá-las. Para isso basta substituir os logos (arquivos de imagens) que estão no diretório de instalação do OcoMon, na pasta includes/logos por suas imagens, mantendo o mesmo nome e tamanho (preferencialmente).<br />
+<hr />
+<br />
+<strong><u>Os formatos de saída possíveis (além do formato padrão)</u></strong>:<br />
+<br />
+<u>Relatório 5 linhas</u>: traz informações referentes à identificação do equipamento.<br />
+<br />
+<u>Relatório 1 linha</u>: traz as mesmas informações do formato padrão e mais o número de série e nota fiscal do equipamento.<br />
+<br />
+<u>Mantenedora 1 linha</u>: idem ao relatório 1 linha com mais a informação centro de custo.<br />
+<br />
+<u>Texto com delimitador</u>: traz todas as informações de configuração do equipamento em forma de texto separado por vírgula. Esse formato é útil para colá-los em uma planilha por exemplo.<br />
+<br />
+<u>Configuração</u>: traz toda a configuração do(s) equipamento(s).<br />
+<br />
+<u>Termo de compromisso</u>: esse formato traz um formulário de termo de compromisso, comum em empresas que possuem um controle mais rígido sobre quem é responsável sobre cada equipamento. Nesse caso o formulário deve ser impresso e assinado pelo responsável pelos equipamentos listados.<br />
+<br />
+<hr />
+O texto exibido no formulário de compromisso é o modelo utilizado no <a class="wiki_link_ext" href="http://www.unilasalle.edu.br/canoas/" rel="nofollow">Unilasalle</a>. O mesmo deve ser alterado de acordo com as políticas da sua organização. Para isso, é necessário alterar, no arquivo de idioma utilizado (ocomon/includes/languages/pt_BR.php), as seguintes entradas:<br />
+- TTL_CINFO<br />
+- TTL_TERM_COMP_HW<br />
+- TXT_TERM_COMP_HW<br />
+- TXT_TERM_COMP_1<br />
+- TTL_TERM_COMP_2<br />
+- TXT_TERM_COMP_3<br />
+<hr />
+<br />
+<br />
+<u>Formulário de trânsito</u>: esse formato traz um formulário específico para movimentações de equipamentos para fora da organização.<br />
+<br />
+<hr />
+O texto exibido no formulário de trânsito é o modelo utilizado no <a class="wiki_link_ext" href="http://www.unilasalle.edu.br/canoas/" rel="nofollow">Unilasalle</a>. O mesmo deve ser alterado de acordo com as políticas de sua organização. Para isso, é necessário alterar, no arquivo de idioma utilizado (ocomon/includes/languages/pt_BR.php), as seguintes entradas:<br />
+- TTL_CINFO<br />
+- TTL_FORM_TRANSIT_EQUIP_INFO<br />
+- TXT_FORM_TRANSIT_EQUIP_INFO<br />
+- TXT_FORM_TRANSIT_1<br />
+<hr />
+
+    </div>
+  </body>
+</html>
